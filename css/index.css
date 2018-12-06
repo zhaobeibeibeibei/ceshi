@@ -1,0 +1,165 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.page{
+    /* 内边距塌陷 */
+    overflow: hidden;
+}
+.logo{
+    width: 251px;
+    height: 186px;
+    margin: 60px auto;
+}
+.one .info{
+text-align: center;
+}
+.one .other{
+    width: 779px;
+    height: 49px;
+    margin: 60px auto;
+}
+.one .info img{
+    opacity: 0;
+    margin: 0 30px;
+   
+}
+/* 第一屏动画 */
+.one.current .info img {
+	margin: 0 5px;
+    opacity: 1;
+    transition: all 2s;
+}
+
+.two>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+}
+.two .pai{
+    width: 500px;
+}
+.two .other{
+    width: 635px;
+}
+.two .pai img:nth-child(1){
+    transform: translate(400px) rotate(60deg);
+}
+.two .pai img:nth-child(2){
+    transform: translate(200px) rotate(30deg);
+}
+.two .pai img:nth-child(3){
+    transform: translateX(400px) rotateX(60deg);
+}
+.two .pai img:nth-child(4){
+    transform: translateY(200px) rotateX(60deg);
+}
+.two .pai img:nth-child(5){
+    transform: translateZ(400px) rotateX(60deg);
+}
+.two .pai img:nth-child(6){
+    transform: translate(800px) rotate(120deg);
+}
+.two .pai img:nth-child(7){
+    transform: translate(600px) rotate(150deg);
+}
+.two .pai img:nth-child(8){
+    transform: translate(900px) rotate(180deg);
+}
+.two .pai img:nth-child(9){
+    transform: translate(400px) rotate(270deg);
+}
+/* 第二屏动画 */
+.two.current .pai img{
+    transform: translate(0) rotate(0deg);
+    transition: all 1s;
+}
+.three>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+    position: relative;
+}
+
+.huo{
+    width: 203px;
+    height: 204px;
+    position: absolute;
+    left:700px;
+    bottom: 0px;
+    opacity: 0;
+    
+}
+/* 第三屏动画 */
+.three.current .huo{
+   opacity: 1;
+   transform: translate(400px,-250px);
+   transition: all 1s;
+}
+
+.four>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+    
+}
+.four .serch{
+    width: 529px;
+    height: 200px;
+    /* background-color: brown; */
+   position: relative;
+  
+}
+.sou{
+    width: 100%;
+    height: 66px;
+    background: url(../images/search.png) no-repeat;
+    transform: translate(-118%,0);
+}
+.four .key{
+    width: 0px;
+    height: 22px;
+    background: url(../images/key.png) no-repeat;
+    position: absolute;
+    top: 22px;
+    left: 20px;
+}
+.father{
+    width: 100%;
+    height: 372px;
+    /* background-color: chartreuse; */
+    position: relative;
+    top:-14px;
+    overflow: hidden;
+}
+.child{
+    width: 100%;
+    height: 372px;
+    background: url(../images/result.png) no-repeat;
+    transform: translate(0,-100%);
+}
+
+.four.current .sou{
+    transform: translate(0,0);
+    transition: all 1s;
+}
+.four.current .key{
+    animation: typing 1s 1s steps(5) forwards;
+}
+@keyframes typing {
+	from {
+		width: 0px;
+	}
+
+	to {
+		width: 99px;
+	}
+}
+.four.current .child{
+    transform: translate(0,0);
+    transition: all 1s 2.5s;
+}
+

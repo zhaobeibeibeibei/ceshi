@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.fullPage.min.js"></script>
+    
+  
+</head>
+<body>
+    <div class="fullpage">
+         <div class="page one ">
+             <!-- logo -->
+             <div class="logo">
+                 <img src="./images/logo.png" alt="">
+             </div>
+             <div class="info">
+                 <img src="./images/text_1.png" alt="">
+                 <img src="./images/text_2.png" alt="">
+                 <img src="./images/text_3.png" alt="">
+                 <img src="./images/text_4.png" alt="">
+                 <img src="./images/text_5.png" alt="">
+                 <img src="./images/text_6.png" alt="">
+                 <img src="./images/text_7.png" alt="">
+                 <img src="./images/text_8.png" alt="">
+             </div>
+             <div class="other">
+                 <img src="./images/info_1.png" alt="">
+             </div>
+         </div>
+         <div class="page two ">
+             <!-- 盾牌 -->
+             <div class="pai">
+                 <img src="./images/shield_1.png" alt="">
+                 <img src="./images/shield_2.png" alt="">
+                 <img src="./images/shield_3.png" alt="">
+                 <img src="./images/shield_4.png" alt="">
+                 <img src="./images/shield_5.png" alt="">
+                 <img src="./images/shield_6.png" alt="">
+                 <img src="./images/shield_7.png" alt="">
+                 <img src="./images/shield_8.png" alt="">
+                 <img src="./images/shield_9.png" alt="">
+             </div>
+             <div class="other">
+                 <img src="./images/info_2.png" alt="">
+             </div>
+         </div>
+         <div class="page three ">
+             <div class="info">
+                 <img src="./images/info_3.png" alt="">
+             </div>
+             <div class="other">
+                 <img src="./images/circle.png" alt="">
+                
+             </div>
+             <div class="huo">
+                  <img src="./images/rocket.png" alt="">
+             </div>
+         </div>
+         <div class="page four ">
+             <div class="serch">
+                      <!-- 搜索框 -->
+                     <div class="sou"></div>
+                     <!-- 关键字 -->
+                     <div class="key"></div>
+                     <!-- 搜索结果 -->
+                     <div class="father">
+                         <div class="child"></div>
+                     </div>
+             </div>
+        
+            
+             <div class="other">
+                 <img src="./images/info_4.png" alt="">
+             </div>
+         </div>
+         <div class="page five "></div>
+    </div>
+    <script>
+    $('.fullpage').fullpage({
+        sectionSelector: '.page',
+			sectionsColor: [
+				'#0DA5D6',
+				'#2AB561',
+				'#DE8910',
+				'#16BA9D',
+				'#0DA5D6'
+			],
+            afterLoad: function (a, key, c) {
+				// 将其它屏DOM中的 current 类名
+				// 移除
+				$('.page').removeClass('current');
+               
+
+				 // 获取当前屏对应的 DOM，添加 current 类名
+				setTimeout(function () {//待页面加载完毕后执行
+					$('.page').eq(key - 1).addClass('current');
+				 }, 20);
+			}
+
+    })
+    </script>
+</body>
+</html>
